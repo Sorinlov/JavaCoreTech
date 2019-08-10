@@ -30,7 +30,7 @@
 * 不对变量进行初始化就使用则会报错
 
 * final 指示常量 此变量名常全大写
-* static 所修饰变量为类变量888888IyIIIIIIIIIIIIIIIIIIIIIIII
+* static 所修饰变量为类变量
 
 ## math 库
 源文件顶部加此代码 避免每次使用加上前缀Math
@@ -108,6 +108,34 @@ System.out.print('What is ur name');
 String name = in.nextline();  // 读取一行 以回车为分割符 允许空格
 String firstName = in.next();
 int age = in.nextInt();
+```
+
+## 数组
+```java
+int[] samllPrimes = new int[];
+int[] smallPrimes = {2,3,5,7,11,13};
+int[] smallPrimes = new int[] {2,3,5,7,11,13};
+//数组初始化
+
+smallPrimes = new int[] {17, 19, 23, 29, 31, 37}; //匿名数组  重新初始化一个现有数组
+```
+* length
+```
+smallPrimes.length //是一个属性
+```
+
+* copy
+```java
+int[] luckyNumbers = smallPrimes;
+//luckyNumbers  smallPrimes 指向同一个数组
+int[] luckyNumbers = Arrays.copyOf(smallPrimes, smallPrimes.length)
+```
+* Arrays通用方法
+```
+Arrays.sort(a);
+Arrays.binarySearch(type[] a, int start, int end, type v);
+Arrays.fill(type[] a, type v) //将数组所有元素设置为v
+Arrays.equals(type[] a, type[] b)
 ```
 
 
